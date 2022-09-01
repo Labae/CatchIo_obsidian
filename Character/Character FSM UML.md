@@ -50,13 +50,13 @@ classDiagram
 	CharacterState <|-- CharacterActionState
 	
 	class CharacterAimState { }
-	CharacterActionState <|-- CharacterAimingState
+	CharacterActionState <|-- CharacterAimState
 	
 	class CharacterThrowItemState { }
-	CharacterActionState <|-- CharacterThrowingState
+	CharacterActionState <|-- CharacterThrowItemState
 
 	class CharacterConsumeItemState { }
-	CharacterActionState <|-- CharacterThrowingState
+	CharacterActionState <|-- CharacterConsumeItemState
 	
 	class CharacterAttackState { }
 	CharacterActionState <|-- CharacterAttackState
