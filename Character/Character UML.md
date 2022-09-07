@@ -12,6 +12,10 @@ classDiagram
 
 		+ChangeState(CharacterBaseState changedState) void
 	}
+	CharacterStateMachine --> CharacterInput
+	CharacterStateMachine --> Rigidbody2D
+	CharacterStateMachine --> CharacterRenderer
+	CharacterStateMachine --> CharacterAnimator
 
 	class Character {
 		-NetworkCharacter _networkCharacter
@@ -33,7 +37,6 @@ classDiagram
 		-InputReader _inputReader
 		-GameCamera _gameCamera
 		-Vector2 _mouseScreenPosition
-		-CharacterAnimator _characterAnimator
 		
 		~property~
 		+~get~ -~set~ Vector2 MovementDirection
@@ -53,7 +56,6 @@ classDiagram
 	}
 	CharacterInput *-- InputReader
 	CharacterInput --> GameCamera
-	CharacterInput --> CharacterAnimator
 
 	class CharacterRenderer {
 		~property~
